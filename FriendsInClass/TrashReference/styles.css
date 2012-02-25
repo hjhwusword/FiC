@@ -1,0 +1,52 @@
+h1 {
+	text-align: center;
+	color: #000000;
+	font-family: Georgia,'Times New Roman',Times,serif;
+	font-size: 40px;
+    font-weight: normal;
+}
+
+body {
+	/*background-image: url("picture.jpg");*/
+	background-color: #F4F4F4;
+}
+
+#tab {
+	text-align: center;
+	font-size: 15pt;
+	font-family: arial,sans-serif;
+}
+
+.tabArea {
+  font-size: 80%;
+  font-weight: bold;
+}
+
+a.tab {
+  background-color: gray;
+  border: 1px solid #000000;
+  border-bottom-width: 0px;
+  padding: 2px 1em 2px 1em;
+  text-decoration: none;
+}
+
+a.tab, a.tab:visited {
+  color: white;
+}
+
+a.tab:hover {
+  background-color: silver;
+  color: #000000;
+}
+
+a.tab.activeTab, a.tab.activeTab:hover, a.tab.activeTab:visited {
+  background-color: silver;
+  color: #000000;
+}
+
+.tabContent {
+  text-align: left;
+  border: 3px solid gray;
+  background-color: white;
+  width: 100%;
+}

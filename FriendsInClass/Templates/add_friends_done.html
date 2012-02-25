@@ -1,0 +1,26 @@
+{%extends "base.html" %}
+{% block content %}
+
+{% if added_friends %}
+	<h2>The following students have been added to your list</h2>
+    <table>
+   		<tr>
+			<td>Username</td>
+			<td>Last Name</td>
+			<td>First Name</td>
+			<td>Email</td>
+		</tr>
+	{% for added_friend in added_friends %}
+		<tr>
+			<td>{{added_friend.username}}</td>
+			<td>{{added_friend.last_name}}</td>
+			<td>{{added_friend.first_name}}</td>
+			<td>{{added_friend.email}}</td>
+		</tr>					
+	{% endfor %}
+	</table>
+	{% else %}
+<p>None have been added</p>
+{% endif %}
+
+{% endblock %}

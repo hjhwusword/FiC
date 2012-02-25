@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+{% block content %}
+
+  {% if form.errors %}
+    <p class="error">{{form.message.errors}}</p>
+  {% endif %}
+  
+  
+  <form action="" method="post">
+    <ul>
+    	{% csrf_token %}
+  		{{ form.as_ul }}
+  		<li>
+  			<input type=submit value="Log in"/>
+  		</li>
+  	</ul>
+<!--	<input type="hidden" name="next" value="{{ next|escape }}" /> -->	
+  </form>
+  <a href="/accounts/register/">Create An Account</a>
+
+{% endblock %}

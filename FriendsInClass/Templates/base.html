@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">	
+	<head>
+		<title>Friend In Class - My profile</title>
+		<link rel="shortcut icon" href="http://students.washington.edu/jimmyyao/favicon.ico" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<!--<link href="styles.css" type="text/css" rel="stylesheet" />-->
+		<link href="http://students.washington.edu/jimmyyao/styles.css" type="text/css" rel="stylesheet" />
+		<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js" type="text/javascript"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js" type="text/javascript"></script>
+		<script src="script.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<h1> Friend in Class </h1>
+		<div id = "tabsWrapper">
+ 			<ul id ="tabs">
+				<li>
+					<a class="tab activeTab" href="http://friendsinclass.herokuapp.com/"
+						onmouseover="mopen('m1')" onmouseout="mclosetime()">
+						My Profile
+					</a>
+					<div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+						<a href="http://friendsinclass.herokuapp.com/profile/">Edit</a>
+						<a href="http://friendsinclass.herokuapp.com/accounts/password_change/">Change password</a>
+						<a href="http://friendsinclass.herokuapp.com/accounts/logout/">Log out</a>
+					</div>
+				</li>
+  			   	
+				<li>
+					<a class="tab" href="http://friendsinclass.herokuapp.com/schedule/"
+						onmouseover="mopen('m2')" onmouseout="mclosetime()">
+						Schedule
+					</a>
+					<div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+						<a href="#">List View</a>
+						<a href="#">Table View</a>
+					</div>
+				</li>
+ 				
+				<li>
+					<a class="tab" href="http://friendsinclass.herokuapp.com/friends/"
+						onmouseover="mopen('m3')" onmouseout="mclosetime()">				
+						Friends
+					</a>
+					<div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+						<a href="http://friendsinclass.herokuapp.com/add_friends/">Add Friends</a>
+						<a href="#">Remove Friends</a>
+					</div>
+				</li>
+				
+				<li>
+					<a class="tab" href="http://friendsinclass.herokuapp.com/search_friends/"
+						onmouseover="mopen('m4')" onmouseout="mclosetime()">				
+						Search
+					</a>
+					<div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+						<a href="http://friendsinclass.herokuapp.com/search_friends/">Search Friends</a>
+						<a href="#">Search Events</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		{% autoescape on %}
+		<div class="tabContent">
+			{% block content %}
+			{% endblock %}
+		</div>
+		{% endautoescape %}
+		
+	</body>
+</html>

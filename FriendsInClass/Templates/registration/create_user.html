@@ -1,0 +1,20 @@
+{% extends "auth_base.html"%}
+
+{% block auth %}
+
+  {% if form.errors %}
+    <p class="error">{{creation_form.message.errors}}</p>
+  {% endif %}
+  
+  <form action="" method="post">
+    <ul>
+    	{% csrf_token %}
+  		{{ creation_form.as_ul }}
+  		<li>
+  			<input type=submit value="Submit"/>
+  		</li>
+  	</ul>
+  </form>
+  <a href="/accounts/login/">Login</a>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if form.errors %}
+	<p class="error">{{friend_search_form.message.errors}}</p>
+	{% endif %}
+			  	
+	<form action="" method="post">
+ 		{% csrf_token %}
+		{{ friend_search_form.as_ul }}
+		<input type="submit" value="Go">
+	</form>
+	{% if no_match %}
+		<p>No match has been found!</p>
+	{% else %}
+		{% if result %}
+		  <ul>
+			<form action="/add_friends/" method="post">
+			{% csrf_token %}
+			<table>
+				<tr>
+					<td>Username</td>
+					<td>Last Name</td>
+					<td>First Name</td>
+					<td>Email</td>
+					<td>Add To List</td>
+				</tr>
+				{% for user in result %}
+				   <tr>			    	
+					<td>{{user.username}}</td>
+					<td>{{user.last_name}}</td>
+					<td>{{user.first_name}}</td>
+					<td>{{user.email}}</td>
+					<td><input type="checkbox" name="id" value="{{user.id}}"></td>
+				   </tr>			    				    	
+				{% endfor %}
+		   </table>
+		   <input type="submit" value"add">
+    </form>
+</ul>
+	{% endif %}
+{% endif %}
+
+{% endblock %}

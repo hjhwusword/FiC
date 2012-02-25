@@ -1,0 +1,6 @@
+fic_local.db
+*.pyc
+/.project
+/.pydevproject
+/.settings
+FiC_local.db

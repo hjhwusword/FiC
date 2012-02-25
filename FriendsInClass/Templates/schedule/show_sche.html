@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if hasContents %}
+	<h3>Class</h3>
+	<table>
+		<tr>
+			<td>Department</td>
+			<td>Number</td>
+			<td>Sections</td>
+			<td>Location</td>
+			<td>Title</td>
+		</tr>
+		{% for c in classes %}
+			<tr>
+				<td>{{ c.course.dept }}</td>
+				<td>{{ c.course.num }}</td>
+				<td>{{ c.course.sect }}</td>
+				<td>{{ c.course.title }}</td>
+				<td>{{ c.course.location }}</td>
+			</tr>
+		{% endfor %}
+	</table>
+	<h3>Event</h3>
+	<table>
+	
+	</table>
+	<a href="/schedule">Add Class/Event</a>
+	<a href="/schedule">Remove Class/Event</a>
+{% else %}
+	<p>You do not have any event in your schedule</p>
+{% endif %}
+
+{% endblock %}

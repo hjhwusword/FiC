@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="" method="POST">
+	{% csrf_token %}
+	{{ user_form.as_ul }}
+	{{ profile_form.as_ul }}
+	<input type="submit" value="Save changes" />
+</form>
+
+{% endblock %}

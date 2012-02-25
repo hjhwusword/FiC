@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Server Read/Write</title>
+</head>
+
+<h1>Facebook Login Page</h1>
+
+<body>
+	<form action="/server-write/" method="get">
+        <input type="text" name="wName" value="Name">
+		<input type="text" name="wPassword" value="Password">
+        <input type="submit" value="Write">
+    </form>
+	
+    <form action="/server-read/" method="get">
+        <input type="text" name="rName" value="Name">
+        <input type="submit" value="Read">
+    </form>
+</body>
+
+<p>
+  <a href="http://validator.w3.org/check/referer">
+    <img src="http://www.w3.org/Icons/valid-xhtml11"
+    alt="Validate" />
+  </a>
+  <a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img src="http://jigsaw.w3.org/css-validator/images/vcss"
+      alt="Valid CSS!" /></a>
+</p>
+</html>

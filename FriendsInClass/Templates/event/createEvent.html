@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% if form.errors %}
+	<p class="error">{{event_form.message.errors}}</p>
+{% endif %}
+
+{% block content %}
+<form action="" method="POST">
+	{% csrf_token %}
+	{{event_form.as_table}}
+	<input type="submit" value="Create" />
+</form>
+
+{% endblock %}
