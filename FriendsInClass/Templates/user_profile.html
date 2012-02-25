@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<table>
+	<tr><th class="label">Username:</th><th>{{profile.user.username}}</th></tr>
+	<tr><th class="label">Full Name:</th><th>{{profile.user.get_full_name}}</th></tr>
+	<tr><th class="label">Email:</th><th>{{profile.user.email}}</th></tr>
+	<tr><th class="label">Year:</th><th>{{profile.year}}</th></tr>
+	<tr><th class="label">Phone:</th><th>{{profile.phone_num}}</th></tr>
+</table>
+<!--<a href="/schedule">Show schedule</a>-->
+<!--<a href="/profile">Edit</a>-->
+<!--<a href="/accounts/password_change/">Change password</a>-->
+<!--<a href="/accounts/logout/">Log out</a>-->
+	
+{% endblock %}
